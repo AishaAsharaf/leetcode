@@ -1,0 +1,2 @@
+/* Write your T-SQL query statement below */
+select V.customer_id, COUNT(*) as count_no_trans from Transactions T right join Visits V on T.visit_id =V.visit_id where  T.transaction_id IS NULL group by V.customer_id;
